@@ -1,2 +1,2 @@
 # tiny-dotnet-dev-utils
-tiny utilities for dotnet framework development
+tiny utilities for development using dotnet framework
