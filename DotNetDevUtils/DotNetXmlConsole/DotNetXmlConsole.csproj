@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{442DE0A9-449A-4EDC-9BB9-3B71ECB24CBB}</ProjectGuid>
+    <ProjectGuid>{1D0B143A-8E19-4468-8465-AC61C5994612}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DotNetRegExConsole</RootNamespace>
-    <AssemblyName>DotNetRegExConsole</AssemblyName>
+    <RootNamespace>DotNetXmlConsole</RootNamespace>
+    <AssemblyName>DotNetXmlConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

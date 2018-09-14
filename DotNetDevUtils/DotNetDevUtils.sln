@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRegExConsole", "DotNe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetUtilsCommon", "DotNetUtilsCommon\DotNetUtilsCommon.csproj", "{F113638A-4EFF-4917-B814-0A7E514CC47F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetXmlConsole", "DotNetXmlConsole\DotNetXmlConsole.csproj", "{1D0B143A-8E19-4468-8465-AC61C5994612}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F113638A-4EFF-4917-B814-0A7E514CC47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F113638A-4EFF-4917-B814-0A7E514CC47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F113638A-4EFF-4917-B814-0A7E514CC47F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0B143A-8E19-4468-8465-AC61C5994612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0B143A-8E19-4468-8465-AC61C5994612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0B143A-8E19-4468-8465-AC61C5994612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0B143A-8E19-4468-8465-AC61C5994612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
