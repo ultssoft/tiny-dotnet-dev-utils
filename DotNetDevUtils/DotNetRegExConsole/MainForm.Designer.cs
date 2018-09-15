@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splittContainerEx1 = new Ults.Windows.Forms.SplitContainerEx();
+            this.buttonOpenRead = new System.Windows.Forms.Button();
             this.checkedListBoxOptions = new System.Windows.Forms.CheckedListBox();
             this.buttonDoMatches = new System.Windows.Forms.Button();
             this.textBoxExPattern = new Ults.Windows.Forms.TextBoxEx();
@@ -53,6 +54,7 @@
             // 
             // splittContainerEx1.Panel1
             // 
+            this.splittContainerEx1.Panel1.Controls.Add(this.buttonOpenRead);
             this.splittContainerEx1.Panel1.Controls.Add(this.checkedListBoxOptions);
             this.splittContainerEx1.Panel1.Controls.Add(this.buttonDoMatches);
             this.splittContainerEx1.Panel1.Controls.Add(this.textBoxExPattern);
@@ -71,6 +73,17 @@
             this.splittContainerEx1.Size = new System.Drawing.Size(1036, 660);
             this.splittContainerEx1.SplitterDistance = 457;
             this.splittContainerEx1.TabIndex = 0;
+            // 
+            // buttonOpenRead
+            // 
+            this.buttonOpenRead.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenRead.Location = new System.Drawing.Point(360, 201);
+            this.buttonOpenRead.Name = "buttonOpenRead";
+            this.buttonOpenRead.Size = new System.Drawing.Size(94, 29);
+            this.buttonOpenRead.TabIndex = 7;
+            this.buttonOpenRead.Text = "Read";
+            this.buttonOpenRead.UseVisualStyleBackColor = true;
+            this.buttonOpenRead.Click += new System.EventHandler(this.buttonOpenRead_Click);
             // 
             // checkedListBoxOptions
             // 
@@ -133,11 +146,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxExInput.Font = new System.Drawing.Font("ＭＳ ゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxExInput.Location = new System.Drawing.Point(3, 199);
+            this.textBoxExInput.Location = new System.Drawing.Point(3, 230);
             this.textBoxExInput.MaxLength = 0;
             this.textBoxExInput.Multiline = true;
             this.textBoxExInput.Name = "textBoxExInput";
-            this.textBoxExInput.Size = new System.Drawing.Size(451, 458);
+            this.textBoxExInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxExInput.Size = new System.Drawing.Size(451, 427);
             this.textBoxExInput.TabIndex = 6;
             // 
             // radioButtonCaptures
@@ -185,6 +199,7 @@
             this.textBoxExOutput.Multiline = true;
             this.textBoxExOutput.Name = "textBoxExOutput";
             this.textBoxExOutput.ReadOnly = true;
+            this.textBoxExOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxExOutput.Size = new System.Drawing.Size(569, 617);
             this.textBoxExOutput.TabIndex = 10;
             // 
@@ -220,6 +235,7 @@
         private System.Windows.Forms.RadioButton radioButtonCaptures;
         private System.Windows.Forms.RadioButton radioButtonGroups;
         private System.Windows.Forms.RadioButton radioButtonMatches;
+        private System.Windows.Forms.Button buttonOpenRead;
     }
 }
 

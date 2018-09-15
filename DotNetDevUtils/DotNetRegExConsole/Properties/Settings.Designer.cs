@@ -94,5 +94,17 @@ namespace DotNetRegExConsole.Properties {
                 this["SplitterDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FileReadInitialDirectory {
+            get {
+                return ((string)(this["FileReadInitialDirectory"]));
+            }
+            set {
+                this["FileReadInitialDirectory"] = value;
+            }
+        }
     }
 }

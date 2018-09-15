@@ -15,6 +15,7 @@ namespace DotNetXmlConsole
         public MainForm()
         {
             InitializeComponent();
+            comboBoxXPath.GotFocus += (s, e) => { comboBoxXPath.SelectAll(); };
         }
 
         private void buttonDoFilter_Click(object sender, EventArgs e)
@@ -26,8 +27,10 @@ namespace DotNetXmlConsole
 
                 var xnm = new System.Xml.XmlNamespaceManager(xml.NameTable);
 
-                var result = xml.SelectNodes(textBoxExXpath.Text, xnm);
+                var result = xml.SelectNodes(comboBoxXPath.Text, xnm);
                 textBoxExOutput.Text = string.Join("\r\n\r\n--------------------\r\n\r\n", result.Cast<System.Xml.XmlNode>().Select(f => FormatXmlDocument(f.OuterXml)));
+                if (textBoxExOutput.Text.Length == 0)
+                    textBoxExOutput.Text = "No results.";
             }
             catch (System.Exception ex)
             {
@@ -59,6 +62,20 @@ namespace DotNetXmlConsole
             string formattedXml = reader.ReadToEnd();
 
             return formattedXml;
+        }
+
+        private void buttonOpenRead_Click(object sender, EventArgs e)
+        {
+            using(var dlg = new System.Windows.Forms.OpenFileDialog())
+            {
+                dlg.InitialDirectory = Properties.Settings.Default.FileReadInitialDirectory;
+                if (dlg.ShowDialog() != DialogResult.OK)
+                    return;
+
+                textBoxExInput.Text = System.IO.File.ReadAllText(dlg.FileName);
+                Properties.Settings.Default.FileReadInitialDirectory = System.IO.Path.GetDirectoryName(dlg.FileName);
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }

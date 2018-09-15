@@ -87,6 +87,21 @@ namespace DotNetRegExConsole
 
         }
 
+        private void buttonOpenRead_Click(object sender, EventArgs e)
+        {
+            using(var dlg = new System.Windows.Forms.OpenFileDialog())
+            {
+                dlg.InitialDirectory = Properties.Settings.Default.FileReadInitialDirectory;
+                if (dlg.ShowDialog() != DialogResult.OK)
+                    return;
+
+                textBoxExInput.Text = System.IO.File.ReadAllText(dlg.FileName);
+                // Encoding...
+                Properties.Settings.Default.FileReadInitialDirectory = System.IO.Path.GetDirectoryName(dlg.FileName);
+                Properties.Settings.Default.Save();
+            }
+        }
+
         private System.Text.RegularExpressions.RegexOptions GetSelectedRegExOptions()
         {
             return checkedListBoxOptions.SelectedItems
